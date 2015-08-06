@@ -29,6 +29,8 @@ var girl = function() {
     };
 };
 
-exports.myStrategy = myStrategy;
-exports.myMotherStrategy = myMotherStrategy;
-exports.girl = girl;
+module.exports = {
+    "myStrategy": myStrategy,
+    "myMotherStrategy": myMotherStrategy,
+    "girl": girl
+};
