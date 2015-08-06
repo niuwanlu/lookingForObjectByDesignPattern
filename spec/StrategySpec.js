@@ -12,4 +12,11 @@ describe("Strategy Pattern", function() {
         expect(myMotherStrategy.lookingForObject()).toBe("Mother helped me found a boy friend.")
     });
 
+    it("should set my strategy", function() {
+        var mousse = new strategy.girl();
+        var myStrategy = strategy.myStrategy;
+        mousse.setBoyFriendStrategy(myStrategy);
+        expect(mousse.findBoyFriend()).toBe("I found a boy friend by myself.");
+    })
+
 });
