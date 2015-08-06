@@ -10,3 +10,9 @@ To initialize a project for Jasmine
     
 Run tests
     jasmine
+    
+The Story:
+
+1.  Choose different boy friend strategy by strategy pattern.
+
+2.  Method(1)  Create ideal boy friend by herself by singleton pattern.
