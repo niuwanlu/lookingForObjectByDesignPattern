@@ -17,6 +17,11 @@ describe("Strategy Pattern", function() {
         var myStrategy = strategy.myStrategy;
         mousse.setBoyFriendStrategy(myStrategy);
         expect(mousse.findBoyFriend()).toBe("I found a boy friend by myself.");
-    })
+    });
+
+    it("should break up with boy friend", function() {
+        var mousse = new strategy.girl();
+        expect(mousse.breakUpWithBoyFriend()).toBe("I don't love you any more.");
+    });
 
 });

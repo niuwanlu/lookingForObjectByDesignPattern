@@ -25,7 +25,7 @@ var girl = function() {
     };
 
     this.breakUpWithBoyFriend = function () {
-        console.log("I don't love you any more.");
+        return "I don't love you any more.";
     };
 };
 
