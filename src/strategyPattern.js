@@ -1,9 +1,18 @@
-exports.generateHelloWorld = function(number) {
-    var result = [];
+var strategy = function() {
+    this.lookingForObject = function() {
+    };
+};
 
-    for(var i=0; i < number; i++) {
-        result.push("Hello World");
-    }
+var myStrategy = new strategy();
+myStrategy.lookingForObject = function() {
+    return "I found a boy friend by myself.";
+};
 
-    return result;
-}
+var myMotherStrategy = new strategy();
+myMotherStrategy.lookingForObject = function() {
+    return "Mother helped me found a boy friend.";
+};
+
+
+exports.myStrategy = myStrategy;
+exports.myMotherStrategy = myMotherStrategy;
