@@ -1,20 +1,22 @@
-var singleton = function() {
+var singleton = (function() {
     var myOnlyIdealLove;
 
     function createMyOnlyIdealLove() {
-        myOnlyIdealLove = "High Rich Handsome!";
+        myOnlyIdealLove = new Object({"myLove" : "High Rich Handsome!"});
     }
 
-    this.getMyOnlyIdealLove = function() {
+    return {
+        getMyOnlyIdealLove: function () {
 
-        if(myOnlyIdealLove == undefined) {
-            createMyOnlyIdealLove();
+            if (myOnlyIdealLove == undefined) {
+                createMyOnlyIdealLove();
+            }
+            return myOnlyIdealLove;
+
         }
-        return myOnlyIdealLove;
+    }
 
-    };
-
-};
+})();
 
 module.exports = {
     "singleton": singleton
