@@ -1,8 +1,17 @@
 var singleton = function() {
-    var myOnlyIdealLove = "High Rich Handsome!";
+    var myOnlyIdealLove;
+
+    function createMyOnlyIdealLove() {
+        myOnlyIdealLove = "High Rich Handsome!";
+    }
 
     this.getMyOnlyIdealLove = function() {
+
+        if(myOnlyIdealLove == undefined) {
+            createMyOnlyIdealLove();
+        }
         return myOnlyIdealLove;
+
     };
 
 };
