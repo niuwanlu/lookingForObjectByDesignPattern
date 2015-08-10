@@ -16,6 +16,9 @@ baiheWebSite.createBoyFriend = function () {
 };
 
 var shijiWebSite = new marriageWebSite();
+shijiWebSite.createBoyFriend = function() {
+    return shijiBoyFriend;
+};
 
 module.exports = {
     "boyFriend": boyFriend,
