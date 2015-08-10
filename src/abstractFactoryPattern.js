@@ -6,9 +6,14 @@ var baiheBoyFriend = new boyFriend();
 var shijiBoyFriend = new boyFriend();
 
 var marriageWebSite = function() {
+    this.createBoyFriend = function () {
+    };
 };
 
 var baiheWebSite = new marriageWebSite();
+baiheWebSite.createBoyFriend = function () {
+    return baiheBoyFriend;
+};
 
 var shijiWebSite = new marriageWebSite();
 

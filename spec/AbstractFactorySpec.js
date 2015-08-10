@@ -16,5 +16,11 @@ describe('Abstract Factory Pattern', function() {
         var shijiWebSite = abstractFactory.shijiWebSite;
         expect(baiheWebSite instanceof marriageWebSite).toBe(true);
         expect(shijiWebSite instanceof marriageWebSite).toBe(true);
-    })
+    });
+
+    it('baiheWebSite should get baiheBoyFriend', function() {
+        var baiheBoyFriend = abstractFactory.baiheBoyFriend;
+        var baiheWebSite = abstractFactory.baiheWebSite;
+        expect(baiheWebSite.createBoyFriend()).toBe(baiheBoyFriend);
+    });
 });
