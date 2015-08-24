@@ -26,4 +26,11 @@ describe('Observer Pattern', function() {
         expect(friend.onNotify).toHaveBeenCalled();
     });
 
+    it('when find new boy friends resource notify friends', function () {
+        var girl = new observer.girl();
+        spyOn(girl, 'notifyFriendsThereAreBoys');
+        girl.findNewBoyFriendsResource();
+        expect(girl.notifyFriendsThereAreBoys).toHaveBeenCalled();
+    });
+
 });

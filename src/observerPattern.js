@@ -22,6 +22,10 @@ var girl = function() {
             this.myFriends[i].onNotify();
         }
     };
+
+    this.findNewBoyFriendsResource = function () {
+        this.notifyFriendsThereAreBoys();
+    };
 };
 
 var friend = function() {
